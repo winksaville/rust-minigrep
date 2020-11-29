@@ -12,6 +12,10 @@ fn main() {
 
     println!("query: {}\nfilename: {}", config.query, config.filename);
 
+    run(config);
+}
+
+fn run(config: Config) {
     let contents = fs::read_to_string(config.filename)
         .expect("a problem reading");
     println!("contents:\n{}", contents);
